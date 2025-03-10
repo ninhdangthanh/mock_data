@@ -1,0 +1,8 @@
+event-log
+18678	c02sydaTSqRdqgSKG5ij2VoZLFilN	a81e8fff-e970-459b-9b5d-05835be004da	staging-trace.thegrowhub.co	/	VN	172.71.219.80	duration					0	Central	22.2908	114.1501	2025-03-05 03:01:36
+
+product-mapping
+13099	0x83AC4E7ff81987Cc9DF62337018ba545dEb65B1C	4	18678
+
+top-info-view
+5103		0	13099	18678

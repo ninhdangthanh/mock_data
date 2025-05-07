@@ -5,15 +5,14 @@ const { faker } = require('@faker-js/faker');
 const headers = ["section_name", "duration", "pb_mapping_id", "event_id"];
 
 // Define proportions
-const numRows = 10900;
+const numRows = 9980;
 const sectionDistribution = {
-    "productSection": Math.round(numRows * 0.40), // 40%
+    "productSection": Math.round(numRows * 0.55), // 40%
     "moreSection": Math.round(numRows * 0.30),   // 30%
-    "infoSection": Math.round(numRows * 0.20),   // 20%
-    "traceSection": Math.round(numRows * 0.10)   // 10%
+    "infoSection": Math.round(numRows * 0.10),   // 20%
+    "traceSection": Math.round(numRows * 0.05)   // 10%
 };
 
-// Ensure the total matches exactly 10900 (adjust if needed)
 const totalGenerated = Object.values(sectionDistribution).reduce((a, b) => a + b, 0);
 if (totalGenerated !== numRows) {
     sectionDistribution["productSection"] += (numRows - totalGenerated);
@@ -21,13 +20,13 @@ if (totalGenerated !== numRows) {
 
 // Generate unique shuffled pb_mapping_id values
 const generatePbMappingIds = (numRows) => {
-    const ids = Array.from({ length: numRows }, (_, i) => i + 46086);
+    const ids = Array.from({ length: numRows }, (_, i) => i + 143499);
     return faker.helpers.shuffle(ids);
 };
 
 // Generate unique shuffled event_id values
 const generateEventIds = (numRows) => {
-    const ids = Array.from({ length: numRows }, (_, i) => i + 68724);
+    const ids = Array.from({ length: numRows }, (_, i) => i + 156747);
     return faker.helpers.shuffle(ids);
 };
 

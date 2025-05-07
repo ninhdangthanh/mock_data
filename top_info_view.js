@@ -6,13 +6,13 @@ const headers = ["section_name", "duration", "pb_mapping_id", "event_id"];
 
 // Function to generate unique shuffled pb_mapping_id values
 const generatePbMappingIds = (numRows) => {
-    const ids = Array.from({ length: numRows }, (_, i) => i + 68725);
+    const ids = Array.from({ length: numRows }, (_, i) => i + 103337);
     return faker.helpers.shuffle(ids);
 };
 
 // Function to generate unique shuffled event_id values
 const generateEventIds = (numRows) => {
-    const ids = Array.from({ length: numRows }, (_, i) => i + 56515);
+    const ids = Array.from({ length: numRows }, (_, i) => i + 115953);
     return faker.helpers.shuffle(ids);
 };
 
@@ -35,7 +35,7 @@ const generateCSV = (numRows) => {
 };
 
 // Generate CSV data and write to file
-const csvData = generateCSV(10900);
+const csvData = generateCSV(14990);
 fs.writeFileSync('sql-data/top_info_view.csv', csvData, 'utf8');
 
 console.log('CSV data written to top_info_view.csv');
